@@ -26,9 +26,11 @@ namespace CloudFireEng.Business.Firebase
             }
             else { Qref = database.Collection(collection).WhereEqualTo(docCol, docSearch); }
 
-            
+
             return Qref.GetSnapshotAsync().Result;
+          
         }
+  
   
         
     

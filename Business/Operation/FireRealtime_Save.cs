@@ -12,7 +12,7 @@ namespace CloudFireEng.Business.Operation
         {
             
             IFirebase firebase = (IFirebase)class_object;
-            return work.FireRealTime_Add(firebase.table_name, firebase);
+            return work.FireRealTime_Add(firebase.table_names, firebase);
         }
 
         public int Remove(object class_object)
@@ -20,13 +20,13 @@ namespace CloudFireEng.Business.Operation
             firebase = (IFirebase)class_object;
 
 
-            return work.FireRealTime_Delete(firebase.table_name, firebase.ID);
+            return work.FireRealTime_Delete(firebase.table_names, firebase.table_Id);
         }
         public int Update(object class_object)
         {
             firebase = (IFirebase)class_object;
             return 1;
-            //   return work.FireRealTime_Update(firebase.table_name, firebase.ID, firebase);
+            //   return work.FireRealTime_Update(firebase.table_names, firebase.table_Id, firebase);
         }
         public object Selection<T>(object class_object,T classb)
         {
@@ -36,7 +36,7 @@ namespace CloudFireEng.Business.Operation
 
         public object Selection<T>(object class_object, string search_value, string search_col)
         {
-            var a = work.FireRealTime_Search(search_value, firebase.table_name);
+            var a = work.FireRealTime_Search(search_value, firebase.table_names);
             return new Data_Converter().FRealTime_Converter<T>(work.FireRealTime_Search(search_value, search_col).ToString());
         }
 

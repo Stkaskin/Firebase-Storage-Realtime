@@ -4,9 +4,8 @@ using Firebase.Database;
 using System.Threading.Tasks;
 namespace Fire_Storage_Realtime_Firebase.Business.Firebase
 {
-   public class Realtime_2
+  /* public class Realtime_2
     {
-        // alternatif bağlantı mail ve e posta ile
         private async Task<FirebaseClient> Connection_User_LoginAsync()
         {
             var settigns = new Firebase_Settings.Realtime();
@@ -25,4 +24,4 @@ namespace Fire_Storage_Realtime_Firebase.Business.Firebase
             return storage;
         }
     }
-}
+*/}

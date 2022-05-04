@@ -53,20 +53,11 @@
     <Compile Include="Business\Work\Firebase_Work.cs" />
     <Compile Include="Business\Work\Realtime_Work.cs" />
     <Compile Include="Business\Work\Storage_Work.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="My_Data\Class1.cs" />
     <Compile Include="Business\Firebase_Settings.cs" />
+    <Compile Include="My_Data\Class1.cs" />
     <Compile Include="My_Data\number.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,7 +67,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="My_Data\Firebase\cloudfire.json" />
+    <None Include="My_Data\Firebase\cloudfire.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

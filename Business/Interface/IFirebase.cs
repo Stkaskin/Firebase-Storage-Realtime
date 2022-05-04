@@ -3,9 +3,9 @@
     interface IFirebase
 
     {
-        string table_name { get; }
-        string ID { get; set; }
-
-
+        string table_names { get; }
+        string table_Id { get; set; }
+     
+        
     }
 }

@@ -7,9 +7,9 @@ namespace CloudFireEng.Business
     {
       public  class Firebase
         {
-           //cloud dosyasının konumu
+//cloudfile.json location
             public string File_Location = AppDomain.CurrentDomain.BaseDirectory + @"cloudfire.json";
-            public string Firebase_Name = "Firebase Name >>x-app-01 ";
+            public string Firebase_Name = "x-xx-x";
             //Default
             public string EnviromentValue = "GOOGLE_APPLICATION_CREDENTIALS";
         }
@@ -18,22 +18,20 @@ namespace CloudFireEng.Business
     
       public class Realtime 
         {
-            //realtime bilgileri
-            public string BasePath = "https://xx-app-01-default-rtdb.europe-west1.firebasedatabase.app/";
-            public string AuthSecret = "secret token";
+            public string BasePath = "https://**-*west1.firebasedatabase.app/";
+            public string AuthSecret = "xxxx";
 
-            public string ApiKey = "Api key";
-            public string Bucket = "xx-app-01-default-rtdb.europe-west1.firebasedatabase.app";
-            public string Auth_Mail = "mail";
-            public string Auth_Pass = "parola";
+            public string ApiKey = "xx";
+            public string Bucket = "x-xxx-x-*west1.firebasedatabase.app";
+            public string Auth_Mail = "xx@xxxxx.com";
+            public string Auth_Pass = "xxxxx";
         }
         public class Storage
         {
-            public string ApiKey = "api";
-            public string Bucket = "xx-app-01.appspot.com";
-            public string Auth_Mail = "mail";
-            public string Auth_Pass = "parola";
-            //kök dizini /root 
+            public string ApiKey = "x";
+            public string Bucket = "*-x-x.xx.com";
+            public string Auth_Mail = "xx@xx.com";
+            public string Auth_Pass = "**"
             public string File_Child = "files";
         }
         //storge

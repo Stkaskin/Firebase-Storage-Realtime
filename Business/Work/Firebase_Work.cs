@@ -6,16 +6,11 @@ namespace CloudFireEng.Business.Work
     {
         public object Selection(string collection, string docCol, string docSearch)
         {
-            try
-            {
+       
            
                 return new Fire_Base().Selection(collection, docCol, docSearch);
-            }
-            catch
-            {
-
-                return -1;
-            }
+            
+          
         }
 
 

@@ -16,7 +16,15 @@ namespace CloudFireEng.Business.Operation
         }
         public object Firebase_Converter<T>(object datas)
         {
-            return ((List<DocumentSnapshot>)datas).ConvertAll(x => x.ConvertTo<T>());
+ 
+            return (IReadOnlyDocumentsConvertListDocumentSnapshot((QuerySnapshot)datas)).ConvertAll(x => x.ConvertTo<T>());
+        }
+        private List<DocumentSnapshot> IReadOnlyDocumentsConvertListDocumentSnapshot(QuerySnapshot documents)
+        {
+            List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
+            foreach (var item in documents.Documents)
+                snapshots.Add(item);
+            return snapshots;
         }
     }
 }

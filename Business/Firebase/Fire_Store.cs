@@ -59,7 +59,7 @@ return await Firestorage_Add(path,"new_image_"+DateTime.Now);
          
             return await task;
         }
-        private async Task<string>  Firestorage_Get_Async(string file_name)
+        public async Task<string>  Firestorage_Get_Async(string file_name)
         {
             var task = await Firestorage_Connection()
            .Child(settings.File_Child)//files folder
